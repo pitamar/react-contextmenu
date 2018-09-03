@@ -40,10 +40,12 @@ export default class ContextMenu extends AbstractMenu {
             y: 0,
             isVisible: false
         });
+
+		this.subMenuType = (<SubMenu />).type;
     }
 
     getSubMenuType() { // eslint-disable-line class-methods-use-this
-        return SubMenu;
+        return this.subMenuType;
     }
 
     componentDidMount() {
